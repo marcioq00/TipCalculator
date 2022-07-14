@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/style-desktop.css" />
+    <title>Tip calculator app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/index.js" async></script>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <img src="images/logo.svg" alt="Logo splitter" />
+      </header>
+      <main>
+        <div class="main__calculations">
+          <div class="main__calculations__money">
+            <label>
+              <p>Bill</p>
+              <input
+                type="number"
+                min="0"
+                max="99999"
+                placeholder="0"
+                name="money"
+                id="money"
+                class="main__calculations__money--input money__icon"
+              />
+            </label>
+          </div>
+          <div class="main__calculations__tips">
+            <p>Select Tip %</p>
+            <div class="tips__percent">
+              <button class="tips__percent__btn btn" data-percent="0.05">
+                5%
+              </button>
+              <button class="tips__percent__btn btn" data-percent="0.10">
+                10%
+              </button>
+              <button class="tips__percent__btn btn" data-percent="0.15">
+                15%
+              </button>
+              <button class="tips__percent__btn btn" data-percent="0.25">
+                25%
+              </button>
+              <button class="tips__percent__btn btn" data-percent="0.50">
+                50%
+              </button>
+              <input
+                type="number"
+                placeholder="Custom"
+                class="tips__percent__input"
+                value=""
+              />
+            </div>
+          </div>
+          <div class="main__calculations__people">
+            <p class="main__calculations__people--paragraph">
+              Number of People
+            </p>
+            <p class="main__calculations__people--paragraph2"></p>
+            <input
+              type="number"
+              min="0"
+              max="99999"
+              placeholder="1"
+              name="money"
+              id="people"
+              class="main__calculations__people--input people__icon btn"
+            />
+          </div>
+        </div>
+        <div class="main__result">
+          <div class="main__result__tip">
+            <div class="main__result__tip__amount">
+              <div class="tip">
+                <p>
+                  Tip Amount
+                  <br />
+                  <span class="text-gray">/ person</span>
+                </p>
+              </div>
+              <div class="result">
+                <p id="tip__amount">$0.00</p>
+              </div>
+            </div>
+            <div class="main__result__tip__total">
+              <div class="tip">
+                <p>
+                  Total
+                  <br />
+                  <span class="text-gray">/ person</span>
+                </p>
+              </div>
+              <div class="result">
+                <p id="total__tip">$0.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="main__result__btn">
+            <button class="main__result__btn--primary">Reset</button>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
